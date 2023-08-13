@@ -1,26 +1,29 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-
-int main()
+main()
 {
     int n;
-    cout << "Enter the size of array: ";
-    cin >> n;
+    cout<<"Enter the size the array:";
+    cin >>n;
 
     int A[n];
 
-    for(int i =0; i<=n; ++i)
+    for (int i = 0; i<n; ++i)
     {
-        cout <<"Enetr element: "<<i<<": ";
+        cout << "Enter element: "<<i<<": "<<endl;
         cin >> A[i];
-
+        
     }
 
-    cout<<"Array element: ";
-    for (int i = 0; i < n; ++i)
+    cout <<"Array element: ";
+    for(int i = 0; i<n; ++i)
     {
         cout << A[i] << " ";
-
     }
+
+
     return 0;
+
+    
 }
+
