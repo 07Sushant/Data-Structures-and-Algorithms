@@ -1,49 +1,50 @@
 #include <iostream>
-#include <unordered_set>
-#include <vector>
-#include <algorithm>
+using namespace std;
 
-int main()
-{
+const int MAX_SIZE = 100;
+
+void findCommonElements(int arr1[], int size1, int arr2[], int size2) {
+    int common[MAX_SIZE];
+    int commonSize = 0;
+
+    for (int i = 0; i < size1; i++) {
+        for (int j = 0; j < size2; j++) {
+            if (arr1[i] == arr2[j]) {
+                common[commonSize++] = arr1[i];
+                break;
+            }
+        }
+    }
+
+    cout << "Common Elements: ";
+    if (commonSize == 0) {
+        cout << "None";
+    } else {
+        for (int i = 0; i < commonSize; i++) {
+            cout << common[i] << " ";
+        }
+    }
+    cout << endl;
+}
+
+int main() {
+    int arr1[MAX_SIZE];
+    int arr2[MAX_SIZE];
     int size1, size2;
-    std::cin >> size1;
-    std::unordered_set<int> array1;
 
-    for (int i = 0; i < size1; i++)
-    {
-        int num;
-        std::cin >> num;
-        array1.insert(num); 
+    cin >> size1;
+
+    for (int i = 0; i < size1; i++) {
+        cin >> arr1[i];
     }
 
-    std::cin >> size2;
-    std::vector<int> commonElements;
+    cin >> size2;
 
-    for (int i = 0; i < size2; i++)
-    {
-        int num;
-        std::cin >> num;
-        if (array1.find(num) != array1.end())
-        {
-            commonElements.push_back(num);
-        }
+    for (int i = 0; i < size2; i++) {
+        cin >> arr2[i];
     }
 
-    if (!commonElements.empty())
-    {
-        std::sort(commonElements.begin(), commonElements.end());
-
-        std::cout << "Common Elements:";
-        for (int element : commonElements)
-        {
-            std::cout << " " << element;
-        }
-        std::cout << std::endl;
-    }
-    else
-    {
-        std::cout << "Common Elements: None" << std::endl;
-    }
+    findCommonElements(arr1, size1, arr2, size2);
 
     return 0;
 }
