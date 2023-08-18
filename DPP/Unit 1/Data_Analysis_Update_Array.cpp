@@ -1,48 +1,29 @@
 #include <iostream>
-#include <string>
+#include <algorithm>
 using namespace std;
 
-void reverseString(string &str)
-{
-    int n = str.length();
-    for (int i = 0; i < n / 2; i++)
-    {
-        swap(str[i], str[n - i - 1]);
-    }
+void reverseArray(char arr[], int size) {
+    reverse(arr, arr + size);
 }
 
-int main()
-{
+int main() {
+    const int MAX_SIZE = 100;
+    char arr[MAX_SIZE];
     int size;
+
     cin >> size;
-    cin.ignore();
 
-    string input;
-    getline(cin, input);
-
-    string word = "";
-    string updatedSentence = "";
-
-    for (char c : input)
-    {
-        if (c == ' ' || !isprint(c))
-        { 
-            reverseString(word);
-            updatedSentence += word + c; 
-            word = "";
-        }
-        else
-        {
-            word += c;
-        }
+    for (int i = 0; i < size; i++) {
+        cin >> arr[i];
     }
 
-    reverseString(word);
-    updatedSentence += word;
+    reverseArray(arr, size);
 
-    reverseString(updatedSentence);
-
-    cout << "Updated array: " << updatedSentence << endl;
+    cout << "Updated array: ";
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
 
     return 0;
 }
