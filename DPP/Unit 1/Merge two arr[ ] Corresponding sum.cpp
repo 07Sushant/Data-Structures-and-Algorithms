@@ -48,3 +48,11 @@ int main() {
     
     return 0;
 }
+
+//Sushant
+
+// So two question are there in which output are positive and negative 
+// so just assign the sign
+// sum -= arr1[i]; Line 12 
+// sum -= arr2[i]; LIne15
+// here respectively
