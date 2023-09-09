@@ -36,7 +36,7 @@ void sortedInsert(struct Node** head_ref, struct Node* newNode)
             current->next->data < newNode->data)
             current = current->next;
 
-     newNode->next = current->next;
+        newNode->next = current->next;
 
         if (current->next != NULL)
             newNode->next->prev = newNode;
@@ -79,5 +79,6 @@ int main()
 
     return 0;
 }
+
 
 //Sushant
