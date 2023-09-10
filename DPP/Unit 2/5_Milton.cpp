@@ -23,6 +23,8 @@ struct Node* insertEnd(struct Node* head, int data) {
     }
 }
 
+
+
 int isSorted(struct Node* head) {
     if (head == NULL) {
         return 1; 

@@ -88,5 +88,5 @@ int main() {
         free(temp);
     }
 
-    return 0
+    return 0;
 }
