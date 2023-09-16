@@ -1,2 +1,1 @@
-#Updating
-#Soon
+Updating Soon
