@@ -35,6 +35,7 @@ void deleteFromqueue() {
     }
 }
 
+
 // Function to print all elements in the queue
 void printqueue() {
     if (front == -1) {
@@ -79,3 +80,5 @@ int main() {
 
     return 0;
 }
+
+
